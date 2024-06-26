@@ -1,0 +1,48 @@
+<!--
+	border : 테이블의 테두리
+	rowspan : 세로 묶기
+	colspan : 가로 묶기
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+		<h1> 내용 보기 </h1>
+		<table border="1" bordercolor="black" cellspaction="0" width="600">
+			<tbody>
+			<tr>
+				<th width="20%">번호</th> <!-- th 태그는 가운데 정렬 -->
+				<td width="30%" align="center">1</td>    <!-- td 태그는 왼쪽 정렬 -->
+				<th width="20%">작성일</th>
+				<td width="30%" align="center">2024-06-25</td>
+			</tr>
+			<tr>
+				<th width="20%">이름</th>
+				<td width="30%" align="center">고길동</td>
+				<th width="20%">조회수</th>
+				<td width="30%" align="center">10</td>
+			</tr>
+			<th>
+				<th width="20%">제목</th>
+				<td colspan="3%">HTML 을 이용한 게시판 내용보기 화면 제작</td>
+			</th>
+			<tr>
+				<!-- 
+					align : left | center | right => 가로정렬
+						    ====
+					valign : top | middle | bottom => 세로정렬
+								  ========                           * == 밑줄 친 부분 default
+				-->				
+				<td colspan="4" align="left" valign="top" height="200">
+					HTML을 이용한 게시판 내용보기 화면 제작
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</center>
+</body>
+</html>
