@@ -1,0 +1,54 @@
+<!--
+	
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	a{
+		display: block;
+		color: black;
+		text-decoration: none;
+	}
+	a:hover{
+		color: gray;
+		text-decoration: underline;
+	}
+	img{
+		width: 150px;
+		height: 250px;
+	}
+	img:hover{
+		cursor: pointer; /* hand-cursor : 링크가 걸리게 만들어준 상태 */
+		border: 3px solid darkgoldenrod; /* 테두리를 만들어준 상태  solid : 일반 라인선 */
+		opacity: 0.2; /* 투명도를 설정해줌 0.0 ~ 1.0 까지 있음  */
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('img').click(function(){
+		alert("그림선택")
+	})
+})
+</script>
+</head>
+<body>
+	<h3>
+	<a href="#">"무단횡단 왜 잡냐" 중국인들 폭발…난리 난 제주도 근황</a><br>
+	<a href="#">"10살도 사형시켜야"…중국 민심 왜 들끓나</a><br>
+	<a href="#">‘얼차려 훈련병 사망’, 중대장 등 구속송치…훈련규정 </a><br>
+	<a href="#">'2년 열애' 김지민, ♥김준호와 곧 결혼?..당당한 고백 "내</a><br>
+	<a href="#">또 모자 쓴 민희진, '힘들었냐' 질문에 "하이브가 사</a><br>
+	</h3>
+	<img src="m1.jpg">
+	<img src="m2.jpg">
+	<img src="m3.jpg">
+	<img src="m4.jpg">
+	<img src="m5.jpg">
+	<img src="m6.jpg">
+	<img src="m7.jpg">
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!--
+	공간 분할
+	======
+	 div : block => 한줄 전체를 차지하는 태그 println()
+	 span : inline => print()
+	 table : block
+	 
+	 ==================
+	  block     inline
+	 ==================
+	  div		span
+	  h1~h6		a
+	  p			img
+	  br		input
+	  목록 태그 	b,sup : 글자관련
+	  테이블 태그	입력 → <select>
+		  
+	  <div class="wrap">
+		  <div class="header"></div>	
+		  <div class="nav"></div>	
+		  <div class="aside"></div>	
+		  <div class="section"></div>	
+		  <div class="footer"></div>
+	  </div>                              이러면 화면 분할이 많아서 찾기 어렵다
+108p	  
+	  HTML5 지원하는 템플릿 태그 => 찾기 쉽게 제작된 태그 : 시멘텍 태그	
+	  ===================
+	  <header>
+	  <nav>
+      <aside>
+	  <section>	  
+	  <footer>	  
+		  
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		display: inline;
+	}
+	span {
+		display: block;
+	}
+</style>
+</head>
+<body>
+	<h1>블록 형식의 분할</h1>
+	<div>Hello HTML</div>
+	<div>Hello HTML</div>
+	<div>Hello HTML</div>
+	<div>Hello HTML</div>
+	<div>Hello HTML</div>
+	<h1>인라인 형식의 분할</h1>
+	<span>Hello HEML</span>
+	<span>Hello HEML</span>
+	<span>Hello HEML</span>
+	<span>Hello HEML</span>
+	<span>Hello HEML</span>
+</body>
+</html>
+
+
+
+
+
+
