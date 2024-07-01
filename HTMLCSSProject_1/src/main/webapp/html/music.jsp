@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*,com.sist.dao.*"%>
+    pageEncoding="UTF-8" import="java.util.*,com.sist.daoo.*"%>
 <%
     // DAO로부터 데이터 받는다 
     MusicDAO dao=MusicDAO.newInstance();

@@ -40,6 +40,7 @@ public class GoodsDAO
    }
    
    // 기능 설정 
+   
    // 상품 목록 출력 
    public List<GoodsVO> goodsListData(int page)
    {

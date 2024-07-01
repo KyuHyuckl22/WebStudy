@@ -1,0 +1,48 @@
+<!--
+	가시 속성 : 어떻게 보여줄지 디자인
+	=> display 속성
+		= 값 설정 	1) block : 세로로 출력 => 태그가 한줄 전체를 차지 => 자동으로 newLine 
+		      	2) inline : 가로로 출력 => 태그의 크기만큼만 차지 => newLIne이 없다
+		      		=> 태그에 width / height 를 적용하지 않는 경우
+		      	3) inline-block : => wid / height 가 지정된 경우
+		      		=>메뉴 (ul을 이용한다 => block 속성을 가지고 있다 => inline: 메뉴는 주로 (width,height
+		      	4) none : 화면에서 보이지 않는다
+		      	5) table / tabele-row/ table-col / table title
+		      	    => <table> 을 사용하지 않고 구현
+					=> <tlabe> 은 가급적이면 사용하지 않는다 (권장)
+				= HTML 태그 중 block 속성 /inline 속성으로 나눠져 있다
+				  block : 목록 (ul,ol,dl,table),h1~h6 , br, p, hr, div
+				  inline : 입력(input),selsect, textarea, button, 글자(strong, bm, b, font, sub, sup)
+				  		   img, a, span
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>block 속성 태그</h1>
+	<p>Hello Java</p>
+	<h3>Hi oracle</h3>
+	<hr>
+	<ul>
+		<li>AAA</li>
+		<li>BBB</li>
+		<li>CCC</li>
+	</ul>
+	<ol>
+		<li>AAA</li>
+		<li>BBB</li>
+		<li>VVV</li>
+	</ol>
+	<div style="width: 100px; height: 100px; background-color: black;"></div>
+	<h1>inline 속성 태그</h1>
+	<span style="width:100px; height: 100px; background-color: darkblue; color: white;">HELLO</span>
+	<span style="width:100px; height: 100px; background-color: darkgreen; color: white;">HI</span>
+	<span style="width:100px; height: 100px; background-color: darkred; color: white;">HO</span>
+	<input type="text" size="20">
+	<button>클릭</button>
+	
+</body>
+</html>

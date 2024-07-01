@@ -1,0 +1,37 @@
+<!--
+	속성 선택자 => 태그가 가지고 있는 속성값에 대한 처리
+	태그명[속성명=값] => equals 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/*	input[size^="1"]{  --size 가 1로 시작하는
+		background-color: darkred;
+	}*/
+/*	input[size$="0"]{  --size 가 0 으로 끝나는
+		background-color: darkslategrey;
+	}*/
+	input[tpye*="e"]{
+		background-color: darkslategrey;
+	}
+	input[src="https"]{
+		border:3px solid blue;
+	}
+</style>
+</head>
+<body>
+	<input type="text" size="20"><br>
+	<input type="password" size="10"><br>
+	<input type="file" size="30"><br>
+	<input type="date" size="30"><br>
+	<input type="number" size="10"><br>
+	<img src="http">
+	<img src="http">
+	<img src="http">
+	<img src="https">
+	<img src="http">
+</body>
+</html>

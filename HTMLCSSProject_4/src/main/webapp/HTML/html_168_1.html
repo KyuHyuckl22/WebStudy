@@ -1,0 +1,60 @@
+<!--
+	1. 단위(크기)
+		px  ,  %   , em 
+		    ,백분율단위, 배수단위
+	2. 색상 단위
+		background-color:red
+		background-color:rgb(255,255,200)
+		background-color:#F0F (255,0,255)
+	3. URL 단위
+		background:url('경로명')
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	p:nth-child(1){
+		background-color: red;
+	}
+	p:nth-child(2){
+		/*font-size: 100%;*/
+		font-size: 1.0em;
+		background-color: #F00;
+	}
+	p:nth-child(3){
+		/*font-size: 150%;*/
+		font-size: 1.5em;
+		background-color: rgb(255, 0, 0);
+	}
+	p:nth-child(4){
+		/*font-size: 200%;*/
+		font-size: 2.0em;/*em = 배수*/  /*14px => 2.0 * 14 */
+		background-color: #FF0000;
+	}
+	div{
+		/*특별한 경우가 아니라면*/
+		width : 500px;
+		height: 500px;
+		background-image: url('ico_user.png');
+		background-repeat: no-repeat; /*기본 default= 반복 / no-repeat= 반복하지 않는다*/
+		background-size: cover;/*한 바닥을 꽉 채운다*/
+	}
+	h1{
+		color: white;
+		padding-left: 100px;
+		padding-top: 250px;
+	}
+</style>
+</head>
+<body>
+	<p>김남일, 대형 사고쳤다…수습 불가 상황에 결국 중단</p>
+	<p>'윤민수 아들' 윤후, 美 명문대생 됐다…마이클 조던 동</p>
+	<p>장나라, ♥6세 연하 남편에 직진 고백…"아직 생리현</p>
+	<p>"전속계약 만료" 자이언티, 테디와 이별→스탠다드 프렌</p>
+	<div>
+		<h1>Hello Background</h1>
+	</div>
+</body>
+</html>

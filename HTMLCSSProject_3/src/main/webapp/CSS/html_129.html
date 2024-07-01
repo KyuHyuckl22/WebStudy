@@ -1,0 +1,70 @@
+<!--
+	기본 선택자 129p
+	===============
+	전체 선택자:*
+		*{
+			속성 : 값;  => 글꼴 ( 사이트 => 글꼴이 동일 (크기 조절))
+			속성 : 값;
+		}
+	태그 선택자: 태그명 ...
+	
+	태그 선택자 : 태그명 ...
+	태그명 {
+		속성 : 값; 
+		=== 속성들은 이미 만들어져 있다 ( 사용자 정의는 거의 없다, 고정이 되어있는 상태)
+	}
+	
+	=> 구분자
+		ID / CLASS 
+		 |     └> 공통으로 적용되는 CSS => 중복이 가능
+		 └> 중복이 불가능(단독)
+	    => 모든 태그는 id , class 속성이 있다
+	
+	/* 단 점 */
+	 HTML 에서 CSS 에 ID 가 중복이 된 경우 적용 : 처리가 가능
+	      JavaScript 에서는 ID 가 중복된 경우 : 처리가 불가능
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*h1:nth-child(2n+2){*/
+		/* 글자 색상 변경 : color, background-color ;*/
+	/*	color: darkorange;
+	}
+	h1:first-child{
+		color: blue;
+	}
+	h1:last-child{
+		color: green;		
+	}*/
+	/*h1:nth-child(even){
+		color: beige;
+	}
+	h1:nth-child(odd){
+		color: gray;
+	}*/
+	h1.t{
+		color: darkgray;
+	}
+	#r{
+		color: darkred;
+	}
+	
+</style>
+</head>
+<body>
+	<h1 id="r">Hello CSS</h1>
+	<h1 class="t">Hello CSS</h1>
+	<h1 class="t">Hello CSS</h1>
+	<h1>Hello CSS</h1>
+	<h1 class="t">Hello CSS</h1>
+	<h1 class="t">Hello CSS</h1>
+	<h1>Hello CSS</h1>
+	<h1 class="t">Hello CSS</h1>
+	<h1 id="r">Hello CSS</h1>
+	<h1 class="t">Hello CSS</h1>
+</body>
+</html>

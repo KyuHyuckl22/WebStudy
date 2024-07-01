@@ -1,0 +1,50 @@
+<!--
+	사이트 제작시 
+		= 글자
+		= 이미지
+		= 화면 UI (div) 
+		= 메뉴 (ul)
+		= 목록 (table)
+		= 기능 => JavaScript / Java
+				==================== Oracle 에서 데이터를 가지고 온다
+	이미지 관련
+	======= 배경 속성 / 글자 속성
+	1. 배경 속성 (174p)
+		색상 / 배경 스타일
+		= background-color : 배경 색상
+		= background-image : 배경 이미지 => 화면이 이미지보다 큰 경우 반복수행
+		= background-repeat : 반복 이미지 (타일즈)
+		= background-size : 축소/확대, 이미지 크기 조절 => cover(화면에 맞게)
+		  background : 혼합
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		/* 공통 적용*/
+		width: 300px;
+		height: 300px;
+		margin: 10px;
+		display: inline-block;
+	}
+	.a{
+		background-color: cyan;
+	}
+	.b{
+		background-color: magenta;
+	}
+	.c{
+		background-color: darkorange;	
+	}
+</style>
+</head>
+<body>
+	<h1>background-color 속성</h1>
+	<div class="a"></div>
+	<div class="b"></div>
+	<div class="c"></div>
+</body>
+</html>
