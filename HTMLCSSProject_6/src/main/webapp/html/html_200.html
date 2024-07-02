@@ -1,0 +1,57 @@
+<!--
+	지정된 영역을 벗어나는 경우
+	=>hidden / scroll
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body > div{
+		width: 400px;
+		height: 100px;
+		position: relative;
+		border: 2px solid black;
+		/* overflow: hidden; */
+		overflow-y: scroll;
+	}
+	.d{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+	}
+	.a{
+		background-color: red;
+		left: 10px;
+		top: 10px;
+		z-index: 100;
+	}
+	.b{
+		background-color: darkorange;
+		left: 50px;
+		top: 50px;		
+		z-index: 10;
+	}
+	.c{
+		background-color: greenyellow;
+		left: 90px;
+		top: 90px;
+		z-index: 1;
+	}
+</style>
+</head>
+<body>
+	<h1>
+		[단독] 김새론 근황, 유명 커피숍 매니저 취업 "알바 아닌 정직원"
+	</h1>
+	<div>
+		<div class="a d"></div>
+		<div class="b d"></div>	
+		<div class="c d"></div>
+	</div>
+	<h1>
+		 "커피숍에 매니저로 정식 취업한 것은 맞지만, 연예계에서 은퇴한 건 아니"라며 "과거 사고를 반성하면서, 일상 회복에 집중하고 있다.
+	</h1>
+</body>
+</html>

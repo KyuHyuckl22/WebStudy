@@ -1,0 +1,214 @@
+<!--
+	CSS ===> 속성
+	============
+	박스 속성
+	===> 템플릿 제작 
+		 margin : 태그와 태그 사이의 여백
+		     margin - top
+		     margin - left
+		     margin - right
+		     margin - bottom
+		     margin : top right
+		 padding : 태그 안의 이미지,글자에 대한 여백
+		 	padding-top
+		 	padding-left
+		 	padding-right
+		 	padding-bottom
+		 border : 테두리
+			border-width : 두께
+			border-color : 생갓
+			
+			
+		 가시속성
+		 display => 화면 출력 형식
+		 
+		 => block 속성을 가지고 있는 태그
+		  <div><h1~h6><p><br><hr><ul><ol><di><table>
+		 => inline 속성을 가지고 있는 태그    
+		  <img><input><select><tea
+		 => 테이블을 숨기는 경우 : display:none
+		 => 테이블을 대체 ( table은 가급적이면 자제를 권장 )
+		 display : table =>   <table>
+		 display : table-row => <tr>
+		 display : table- cell <td>
+			 
+		 => 글자 관련 속성
+		   1. 글자
+		     font-size : 크기 (px,em(배수)) => 기본 14px
+		     				 ===========
+		     				 large / small
+		     font-family : 글꼴 지정
+		     font-weight : b,i
+		     웹 폰트 사용이 가능 (구글 폰트)	 
+		     color : 글자 색상
+		   2. 스타일
+			 text-decoration : none | underline | overline | line-through (취소선)
+			 text-align => left / center / right
+			 white-space : 줄바꿈 / 공백
+			 line-height : 자간 (줄 간격)
+			 word-spacing: 텍스트 간격
+		  => 배경 ( background)
+		     background-color : 배경색 
+		     background-image: 배경이미지
+		     background-repeat : 반복 => norepeat, repeat
+		     background-size : width / height => cover (축소/확대)
+		     background-position : 출력 위치
+		  => 위치
+		   	 static : 기본 default => 코딩 순서대로 출력
+		   	 absolute : 절대 좌표 => top / left / right / bottom => 브라우저 위치
+		   	 relative : 태그의 좌표 참조 (div => 안에 좌표)
+		   	 fixed : 고정 좌표
+		   	 float : 위치 이동 =>left / right => 해제 clear 
+		   	 z-index : 레이어 (원하는 이미지, 태그를 선택해서 보여준다) => 숫자가 높을수록 위로 올라온다
+		   	 ovreflow : 지정된 위치를 벗어나는 경우에 처리
+		   	 	1) hidden 숨긴다  => card 제작시에 글자 범위를 벗어나는 경우에 주로 사용
+		   	 	2) scroll 스크롤 처리 => overflow-y 
+		   	 					  => overflow-x
+			 
+			 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="table.css">
+<style>
+	pre{
+		white-space: pre-wrap; /* 화면 크기에 맞게 자동 줄바꿈 => 유동속성  */
+	}
+</style>
+</head>
+<body>
+	<table class="table_content" width="500">
+		<tr>
+			<th width="20%">번호</th>
+			<td width="30%" class="tdcenter">1</td>
+			<th width="20%">작성일</th>
+			<td width="30%" class="tdcenter">2024-07-02</td>
+		</tr>
+		<tr>
+			<th width="20%">이름</th>
+			<td width="30%" class="tdcenter">고길동</td>
+			<th width="20%">조회수</th>
+			<td width="30%" class="tdcenter">10</td>
+		</tr>
+		<tr>
+			<th width="20%">제목</th>
+			<td colspan="3">화면을 초과하는 데이터가 있는경우</td>
+		</tr>
+		<tr>
+			<td colspan="4" align="left" valign="top" height="200">
+		<pre>
+김새론은 사고 다음 날 자신의 SNS에 “음주 상태로 큰 잘못을 저질렀다”면서 
+“잘못된 판단과 행동으로 주변 상가 상인, 시민, 복구해준 분들 등 너무나도 많은 분들께 피해를 끼쳤다.
+ 더 신중하고 책임감있게 행동해야 했으나 그러지 못했다. 진심으로 사과드린다”며 고개 숙였다.
+
+김새론은 사고로 피해를 본 자영업자들에게 지불해야 할 합의금, 
+전 소속사 골드메달리스트에 갚아야 할 위약금으로 생활고를 겪는 것으로 전해진다. 
+복귀가 힘들어진 그는 사건 후 옥수동 소재의 커피숍에서 아르바이트를 하거나, 연기 지망생을 상대로 연기 수업을 진행해 왔다.
+
+하지만 현 수입으로는 수 억 원 대의 위약금을 지불하기 어려운 상황.
+복수의 연예 관계자에 따르면 그간 김새론은 일거수일투족 부정적 시선에 심리적 부담을 느꼈지만 
+생활고 극복을 위해 용기를 내 성수동 카페의 매니저로 취업. 직접 손님들을 맞고 있다.
+
+배우의 한 측근은 "커피숍에 매니저로 정식 취업한 것은 맞지만, 
+연예계에서 은퇴한 건 아니"라며 "과거 사고를 반성하면서, 일상 회복에 집중하고 있다. 
+시간이 흐르면 차분히 차기작을 검토할 것"이라고 귀띔했다.
+		</pre>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+	
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--
+	ul 태그가 나오면 => list-style
+	== 메뉴 제작
+	== Card에서주로 사용
+	== first-child, last-child, nth-child()
+								============  자주 사용
+-->
+<style>
+	ul{
+		overflow: hidden;
+	}
+	li{
+		list-style: none;
+		float: left;	
+		padding: 20px;
+	}
+	li:first-child{
+		border-radius: 10px 0 0 10px;
+	}
+	li:last-child{
+		border-radius: 0px 10px 10px 0px;
+	}
+	li:nth-child(2n){
+		background-color: darkred;
+	}
+	li:nth-child(2n+1){
+		background-color: lightgray;
+	}
+	li:hover{
+		cursor:pointer;
+		color: black;
+	}
+	span{
+		width: 100px;
+		height: 100px;
+		display: block;
+	}
+	.danger{
+		border: 1px solid darkred;	
+		background-color: red;
+		border-radius: 20px;
+	}
+	.info{
+		border: 1px solid darkcyan;	
+		background-color: cyan;
+		border-radius: 20px;
+	}
+	.success{
+		border: 1px solid darkgreen;	
+		background-color: green;
+		border-radius: 20px;
+	}
+	.warning{
+		border: 1px solid deeppink;	
+		background-color: pink;
+		border-radius: 20px;
+	}
+	.primary{
+		border: 1px solid darkblue;	
+		background-color: blue;
+		border-radius: 20px;
+	}
+		
+	
+</style>
+</head>
+<body>
+	<ul>
+		<li>홈</li>
+		<li>회원</li>
+		<li>영화예매</li>
+		<li>맛집추천</li>
+		<li>여행코스</li>
+		<li>커뮤니티</li>
+		<li>마이페이지</li>
+	</ul>
+	<hr>
+	<span class="danger"></span>
+	<span class="info"></span>
+	<span class="success"></span>
+	<span class="waring"></span>
+	<span class="primary"></span>
+</body>
+</html>
