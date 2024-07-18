@@ -16,7 +16,7 @@
       <a class="navbar-brand" href="#">내부객체</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="../main/main.jsp?mode=1">Home</a></li>
       <li><a href="#">답변형게시판</a></li>
       <li><a href="#">자료실</a></li>
       <li><a href="../main/main.jsp?mode=3">스토어</a></li>

@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// cookie 한 개 삭제
+	// 쿠키를 삭제하기 위해선 삭제하려는 쿠키의 key 값을 확인
+	// seoul_no
+	String no=request.getParameter("no");
+	Cookie[] cookies=request.getCookies();
+	if(cookies!=null){
+		for(int i=0; i<cookies.length; i++){
+			if(cookies[i].getName().startsWith("seoul_")){
+				cookies[i].setPath("/");
+				cookies[i].setMaxAge(0);
+				response.addCookie(cookies[i]);
+			}
+		}
+	}
+	response.sendRedirect("list.jsp");
+%>

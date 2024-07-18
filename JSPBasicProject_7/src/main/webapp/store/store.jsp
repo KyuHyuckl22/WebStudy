@@ -23,7 +23,7 @@ int totalpage = dao.goodsTotalPage();
 		for (GoodsVO vo : list) {
 		%>
 		<div class="col-sm-3">
-			<a href="#">
+			<a href="../main/main.jsp?mode=3&no=<%=vo.getNo() %>">
 				<div class="thumbnail">
 					<img src="<%=vo.getPoster()%>" style="width: 240px; height: 200px">
 					<p class="a"><%=vo.getName()%></p>

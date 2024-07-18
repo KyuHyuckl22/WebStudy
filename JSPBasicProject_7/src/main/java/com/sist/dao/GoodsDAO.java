@@ -1,5 +1,7 @@
 package com.sist.dao;
+
 import java.util.*;
+import com.sist.database.DataBaseConnection;
 import java.sql.*;
 public class GoodsDAO 
 {
@@ -7,6 +9,8 @@ public class GoodsDAO
    private PreparedStatement ps;
    private final String URL="jdbc:oracle:thin:@localhost:1521:XE";
    private static GoodsDAO dao;
+   private DataBaseConnection dbconn = new DataBaseConnection();
+   
    public GoodsDAO()
    {
 	   try
@@ -104,4 +108,36 @@ public class GoodsDAO
 	   }
 	   return total;
    }
+   
+   public GoodsVO goodsDetailData(int no) {
+	   GoodsVO vo = new GoodsVO();
+	   try {
+		   conn=dbconn.getConnection();
+		   String sql="SELECT no, goods_name, goods_price, goods_sub, goods_poster "
+				     +"FROM goods_all "
+				     +"WHERE no " +no;
+		   ps=conn.prepareStatement(sql);
+		   ResultSet rs=ps.executeQuery();
+		   rs.next();
+		   vo.setNo(rs.getInt(1));
+		   vo.setName(rs.getString(2));
+		   vo.setPrice(rs.getString(3));
+		   vo.setSub(rs.getString(4));
+		   vo.setPoster(rs.getString(5).replace("https", "http"));
+		   
+		   rs.close();
+	   }catch(Exception ex) {
+		   ex.printStackTrace();
+	   }finally {
+		   dbconn.disConnection(conn, ps);
+	   }
+	   return vo;
+   }
+   
+   
+   
 }
+
+
+
+
