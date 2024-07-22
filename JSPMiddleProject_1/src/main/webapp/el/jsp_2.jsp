@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.util.*"%>
 <%--
 	EL 은 out.println() 과 같다   => 데이터를 출력(브라우저) => 결과값을 출력
 	=> 조건 / 연산자
