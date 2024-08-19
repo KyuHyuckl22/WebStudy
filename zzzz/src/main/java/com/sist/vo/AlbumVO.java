@@ -11,7 +11,7 @@ import lombok.Data;
 ANO			NUMBER						앨범번호
 APHOTO		VARCHAR2(2000 BYTE)			앨범사진
 ANAME			VARCHAR2(2000 BYTE)			앨범이름
-ARTIST			VARCHAR2(2000 BYTE)			아티스트
+AARTIST			VARCHAR2(2000 BYTE)			아티스트
 ARDATE			DATE							발매일
 ARATING		NUMBER						별점
 APRICE			VARCHAR2(2000 BYTE)			앨범가격
@@ -23,7 +23,7 @@ AIMG			VARCHAR2(4000 BYTE)			앨범이미지
  */
 @Data
 public class AlbumVO {
-	private int ano,arating;
-	private String aphoto,aname,artist,aprice,adis,adisprice,adetail,aimg;
-	private Date ardate;
+	private int ano;
+	private String ardate,aphoto,aname,aartist,aprice,adisprice,adetail,aimg;
+
 }
